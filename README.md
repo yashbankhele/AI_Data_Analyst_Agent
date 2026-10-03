@@ -1,143 +1,82 @@
+<div align="center">
 
 # 🤖 AI Data Analyst Agent
 
 ### AI-Powered Data Analytics & Business Intelligence Platform
 
-**Developed by Yash Bankhele**
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?logo=streamlit&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas&logoColor=white)
+![Plotly](https://img.shields.io/badge/Plotly-Visualization-3F4F75?logo=plotly&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-F7931E?logo=scikitlearn&logoColor=white)
 
-An intelligent data analytics web application built with **Python, Streamlit, Pandas, Plotly, Scikit-learn, and LLM integration**.
+**Upload a CSV or Excel file → get a cleaned dataset, KPIs, a dashboard, AI insights, a chat analyst, a business report and a forecast.**
 
-The AI Data Analyst Agent allows users to upload CSV or Excel datasets and automatically perform **data cleaning, exploratory data analysis, KPI analysis, dashboard generation, AI-powered insights, conversational data analysis, business reporting, and basic forecasting**.
-
----
-
-## 👨‍💻 Developer
-
-**Yash Bankhele**
-
-- GitHub: https://github.com/yashbankhele
-- Project Repository: https://github.com/yashbankhele/AI_Data_Analyst_Agent
+</div>
 
 ---
 
-## 📌 Project Overview
+## 📑 Table of Contents
 
-Business users often have raw CSV or Excel data but may not know:
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Design Principle](#-design-principle)
+- [Tech Stack](#️-tech-stack)
+- [Project Structure](#-project-structure)
+- [Installation](#️-installation)
+- [Environment Variables](#-environment-variables)
+- [Usage](#-usage)
+- [System Design](#-system-design)
+- [Example Questions](#-example-business-questions)
+- [Future Improvements](#-future-improvements)
+- [Disclaimer](#️-disclaimer)
+- [Author](#-author)
 
-- Which columns are important
-- Which KPIs should be calculated
-- Which visualizations are appropriate
-- Which business areas are performing well
-- Which areas need improvement
-- What decisions can be taken from the data
+---
 
-The **AI Data Analyst Agent** addresses this problem by automatically understanding the uploaded dataset, identifying important business columns, calculating meaningful KPIs, generating dashboards, producing business insights, and explaining the results using an LLM.
+## 📌 Overview
+
+Business users often have raw CSV or Excel data but don't know:
+
+- Which columns matter
+- Which KPIs to calculate
+- Which charts fit the data
+- Which areas are performing well or poorly
+- What decisions the data supports
+
+**AI Data Analyst Agent** solves this by automatically understanding the uploaded dataset, identifying business columns, calculating KPIs, generating dashboards, producing insights, and explaining results in plain language using an LLM.
 
 ---
 
 ## ✨ Key Features
 
-### 📂 1. CSV & Excel Upload
+| # | Feature | What it does |
+|---|---------|--------------|
+| 1 | 📂 **CSV & Excel Upload** | Previews data, shape, column names and structure |
+| 2 | 🧹 **Automated Data Cleaning** | Handles missing values and duplicates; numeric → median, text → mode / `Unknown` |
+| 3 | 🔎 **Exploratory Data Analysis** | Column summary, missing-value summary, numeric & categorical stats, correlation matrix |
+| 4 | 📅 **Date & Time Analysis** | Auto-detects date columns; extracts Year, Month, Quarter, Week, Day, Hour, etc. |
+| 5 | 📊 **Business-Aware KPIs** | Detects Sales, Profit, Quantity, Discount, Region, etc. and computes relevant KPIs |
+| 6 | 📈 **Intelligent Chart Selection** | Picks the right chart type based on data pattern |
+| 7 | 🖥️ **Auto Dashboard** | No manual axis, chart type or aggregation selection needed |
+| 8 | 🧠 **AI Business Insights** | Best / weakest segments, margin analysis, growth, discount impact, risks |
+| 9 | 🤖 **LLM Analyst Explanation** | Executive summaries, recommendations, risks & opportunities |
+| 10 | 💬 **Chat With Data** | Ask questions in natural language, answered from calculated facts |
+| 11 | 📄 **Business Report Generator** | Downloadable Markdown report |
+| 12 | 🔮 **Forecasting** | Sales, Profit and Quantity forecast using Linear Regression baseline |
 
-Upload datasets in:
-
-- CSV format
-- Excel format
-
-The application automatically displays:
-
-- Dataset preview
-- Dataset shape
-- Column names
-- Data structure
-
----
-
-### 🧹 2. Automated Data Cleaning
-
-The application detects and handles:
-
-- Missing values
-- Duplicate rows
-- Numeric columns
-- Text columns
-- Data inconsistencies
-
-Missing numeric values are handled using **median values**, while text values are handled using **mode or `Unknown`**.
-
----
-
-### 🔎 3. Exploratory Data Analysis
-
-Automatically generates:
-
-- Dataset shape
-- Column summary
-- Missing-value summary
-- Numerical statistics
-- Categorical summaries
-- Correlation matrix
-
----
-
-### 📅 4. Date & Time Analysis
-
-Automatically detects date/time columns and generates:
-
-- Year
-- Month
-- Month Name
-- Quarter
-- Week
-- Day
-- Day Name
-- Hour
-
-These features enable time-based trend and performance analysis.
-
----
-
-### 📊 5. Business-Aware KPI Selection
-
-Instead of calculating random metrics, the application identifies business-related columns such as:
-
-- Sales
-- Revenue
-- Profit
-- Quantity
-- Discount
-- Cost
-- Orders
-- Customers
-- Products
-- Categories
-- Regions
-- Segments
-- Channels
-- Dates
-
-It can calculate KPIs such as:
+### 📊 KPIs Supported
 
 - Total Sales / Revenue
-- Total Profit
-- Profit Margin %
-- Total Orders
-- Average Order Value
+- Total Profit & Profit Margin %
+- Total Orders & Average Order Value
 - Total Quantity Sold
 - Average Discount
-- Monthly Sales Growth %
-- Monthly Profit Growth %
-- Top Category
-- Top Product
-- Top Region
-- Top Customer
+- Monthly Sales / Profit Growth %
+- Top Category / Product / Region / Customer
 - Cost-to-Sales Ratio
 
----
-
-### 📈 6. Intelligent Chart Selection
-
-The application automatically selects suitable charts based on the dataset.
+### 📈 Intelligent Chart Selection
 
 | Data Pattern | Visualization |
 |---|---|
@@ -152,163 +91,56 @@ The application automatically selects suitable charts based on the dataset.
 | Multiple Numeric Measures | Heatmap |
 | Sales Distribution | Histogram |
 
-This allows the dashboard to adapt to different datasets automatically.
+### 📄 Business Report Contents
+
+Dataset understanding · KPI summary · Dashboard explanation · Key insights · Risks & weak areas · Opportunities · Recommended actions · KPIs to monitor
+
+### 🔮 Forecasting Outputs
+
+Actual vs Forecast chart · Forecast table · Forecast metrics · Forecast business insights
 
 ---
 
-### 📊 7. Automatic Dashboard Generation
-
-The dashboard is generated based on the structure and business meaning of the uploaded dataset.
-
-The user does not need to manually select:
-
-- X-axis
-- Y-axis
-- Chart type
-- Aggregation
-
-The application uses business logic and chart intelligence to determine suitable visualizations.
-
----
-
-### 🧠 8. AI-Powered Business Insights
-
-The application generates insights such as:
-
-- Best-performing category
-- Weakest region
-- Top-performing product
-- Low-profit products
-- Profit margin analysis
-- Sales growth analysis
-- Discount impact
-- Business risks
-- Improvement opportunities
-
----
-
-### 🤖 9. LLM-Powered Analyst Explanation
-
-The LLM converts calculated data into understandable business language.
-
-It can generate:
-
-- Executive summaries
-- KPI explanations
-- Dashboard explanations
-- Risks and opportunities
-- Business recommendations
-- Improvement suggestions
-
-### Important Design Principle
+## 🎯 Design Principle
 
 > **Python calculates the numbers. The LLM explains the meaning.**
 
-The LLM is not responsible for directly calculating KPIs.
+```text
+Python / Pandas  →  Accurate calculations  →  Business metrics & facts  →  LLM  →  Explanation + Recommendations
+```
+
+The LLM never calculates KPIs directly. This reduces the risk of hallucinated numbers.
 
 ---
 
-### 💬 10. Chat With Data
+## 🛠️ Tech Stack
 
-Users can ask natural-language questions such as:
-
-- Why is profit low?
-- Which category should I focus on?
-- Which region is weak?
-- Which product is loss-making?
-- How can the business improve sales?
-- What business decision should be taken first?
-
-The LLM responds using calculated dataset facts and summaries.
-
----
-
-### 📄 11. AI Business Report Generator
-
-The application can generate a downloadable business report containing:
-
-- Dataset understanding
-- KPI summary
-- Dashboard explanation
-- Key insights
-- Risks and weak areas
-- Opportunities
-- Recommended actions
-- KPIs to monitor
-
-The report can be downloaded as a Markdown file.
+| Category | Tools |
+|---|---|
+| Language | Python |
+| Data Analytics | Pandas, NumPy |
+| Machine Learning | Scikit-learn (Linear Regression) |
+| Visualization | Plotly |
+| Web App | Streamlit |
+| AI / LLM | LLM API integration (OpenRouter) |
+| File Processing | OpenPyXL |
+| Config / API | Requests, Python-dotenv |
 
 ---
 
-### 🔮 12. Sales, Profit & Quantity Forecasting
-
-The application performs basic forecasting using monthly aggregated data.
-
-It can forecast:
-
-- Sales
-- Profit
-- Quantity
-
-The current forecasting implementation uses **Linear Regression** as a baseline model.
-
-The application provides:
-
-- Actual vs Forecast visualization
-- Forecast table
-- Forecast metrics
-- Forecast business insights
-
----
-
-# 🛠️ Tech Stack
-
-### Programming
-- Python
-
-### Data Analytics
-- Pandas
-- NumPy
-
-### Machine Learning
-- Scikit-learn
-- Linear Regression
-
-### Visualization
-- Plotly
-
-### Web Application
-- Streamlit
-
-### AI / LLM
-- LLM API Integration
-
-### File Processing
-- OpenPyXL
-
-### API / Configuration
-- Requests
-- Python-dotenv
-
----
-
-# 📁 Project Structure
+## 📁 Project Structure
 
 ```text
 AI_Data_Analyst_Agent/
 │
 ├── app/
-│   └── main.py
+│   └── main.py                  # Streamlit entry point
 │
 ├── assets/
-│
 ├── data/
-│
 ├── docs/
 │   └── project_documentation.md
-│
 ├── notebooks/
-│
 ├── reports/
 │
 ├── src/
@@ -329,41 +161,32 @@ AI_Data_Analyst_Agent/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
-````
+```
 
 ---
 
-# ⚙️ Installation
+## ⚙️ Installation
 
-## 1. Clone the Repository
+**1. Clone the repository**
 
 ```bash
 git clone https://github.com/yashbankhele/AI_Data_Analyst_Agent.git
-```
-
-## 2. Navigate to the Project
-
-```bash
 cd AI_Data_Analyst_Agent
 ```
 
-## 3. Create a Virtual Environment
-
-### Windows
+**2. Create a virtual environment**
 
 ```bash
+# Windows
 python -m venv venv
 venv\Scripts\activate
-```
 
-### macOS / Linux
-
-```bash
+# macOS / Linux
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-## 4. Install Dependencies
+**3. Install dependencies**
 
 ```bash
 pip install -r requirements.txt
@@ -371,7 +194,7 @@ pip install -r requirements.txt
 
 ---
 
-# 🔐 Environment Variables
+## 🔐 Environment Variables
 
 Create a `.env` file in the project root:
 
@@ -380,185 +203,113 @@ OPENROUTER_API_KEY=your_api_key_here
 OPENROUTER_MODEL=your_model_id_here
 ```
 
-> ⚠️ Never upload your `.env` file or API keys to GitHub.
+> ⚠️ Never commit your `.env` file or API keys to GitHub.
 
 ---
 
-# ▶️ Run the Application
+## ▶️ Usage
 
-Start the Streamlit application:
+Run the app:
 
 ```bash
 streamlit run app/main.py
 ```
 
-The application will open in your browser.
+Then in the browser:
+
+1. Upload a CSV or Excel dataset
+2. **Data Cleaning** – clean the dataset
+3. **EDA** – explore the data
+4. **Date & Time Analysis** – when a date column exists
+5. **Dashboard** – view auto-generated visualizations
+6. **AI Insights** – understand business performance
+7. **Chat With Data** – ask questions
+8. **AI Business Report** – generate and download
+9. **Trend Prediction** – forecast future performance
 
 ---
 
-# 🚀 How to Use
-
-1. Launch the Streamlit application.
-2. Upload a CSV or Excel dataset.
-3. Open **Data Cleaning** and clean the dataset.
-4. Explore the dataset using **EDA**.
-5. Perform **Date & Time Analysis** when required.
-6. Open **Dashboard** to view automatically generated visualizations.
-7. Open **AI Insights** to understand business performance.
-8. Use **Chat With Data** to ask questions about the dataset.
-9. Generate an **AI Business Report**.
-10. Use **Trend Prediction** to forecast future performance.
-
----
-
-# 🧠 System Design
-
-The project follows a separation between **data calculation** and **AI explanation**.
+## 🧠 System Design
 
 ```text
-                ┌─────────────────────┐
-                │   CSV / Excel Data  │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │   Data Processing   │
-                │   Pandas / NumPy    │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │   Data Cleaning     │
-                │       + EDA         │
-                └──────────┬──────────┘
-                           │
-                           ▼
-                ┌─────────────────────┐
-                │   KPI & Analysis    │
-                │      Engine         │
-                └──────────┬──────────┘
-                           │
-             ┌─────────────┼─────────────┐
-             ▼             ▼             ▼
-        Dashboard       Insights      Forecasting
-             │             │             │
-             └─────────────┼─────────────┘
-                           ▼
-                ┌─────────────────────┐
-                │    LLM Analysis     │
-                │ Explanation / Chat  │
-                └─────────────────────┘
+          ┌─────────────────────┐
+          │   CSV / Excel Data  │
+          └──────────┬──────────┘
+                     ▼
+          ┌─────────────────────┐
+          │   Data Processing   │
+          │   Pandas / NumPy    │
+          └──────────┬──────────┘
+                     ▼
+          ┌─────────────────────┐
+          │ Data Cleaning + EDA │
+          └──────────┬──────────┘
+                     ▼
+          ┌─────────────────────┐
+          │ KPI & Analysis Engine│
+          └──────────┬──────────┘
+        ┌────────────┼────────────┐
+        ▼            ▼            ▼
+   Dashboard      Insights    Forecasting
+        └────────────┼────────────┘
+                     ▼
+          ┌─────────────────────┐
+          │    LLM Analysis     │
+          │ Explanation / Chat  │
+          └─────────────────────┘
 ```
 
 ---
 
-# 🎯 Important Design Principle
+## 💡 Example Business Questions
 
-```text
-Python / Pandas
-      ↓
-Accurate calculations
-      ↓
-Business metrics & facts
-      ↓
-LLM
-      ↓
-Explanation + Recommendations
-```
-
-This architecture reduces the risk of allowing the LLM to independently calculate numerical KPIs.
+- What is the total revenue and profit?
+- What is the profit margin?
+- Which category generates the most sales?
+- Which product is loss-making?
+- Which region is underperforming?
+- Which channel performs best?
+- Are discounts hurting profitability?
+- Is sales performance increasing or declining?
+- What should the business investigate first?
 
 ---
 
-# 💡 Example Business Questions
+## 🔮 Future Improvements
 
-The application can help answer questions such as:
-
-* What is the total revenue?
-* What is the total profit?
-* What is the profit margin?
-* Which category generates the most sales?
-* Which product is loss-making?
-* Which region is underperforming?
-* Which channel performs best?
-* Are discounts affecting profitability?
-* Is sales performance increasing or declining?
-* What business area should be investigated first?
+- [ ] PDF report export
+- [ ] Excel report export
+- [ ] Automatic anomaly detection
+- [ ] Advanced forecasting models
+- [ ] User authentication
+- [ ] Database integration
+- [ ] Domain-specific templates (Sales, Inventory, HR, Finance, Marketing)
+- [ ] Dashboard image export
+- [ ] Multi-file comparison
 
 ---
 
-# 🔮 Future Improvements
+## ⚠️ Disclaimer
 
-Planned improvements include:
+This project is built for **learning, portfolio and demonstration purposes**.
 
-* PDF report export
-* Excel report export
-* Automatic anomaly detection
-* Advanced forecasting models
-* User authentication
-* Database integration
-* Domain-specific templates
-* Sales analytics templates
-* Inventory analytics templates
-* HR analytics templates
-* Finance analytics templates
-* Marketing analytics templates
-* Dashboard image export
-* Multi-file comparison
+- Forecasts are basic estimates, not guaranteed predictions.
+- Business recommendations are based on available dataset facts and should be validated before real-world decisions.
 
 ---
 
-# 📌 Project Purpose
+## 👨‍💻 Author
 
-This project was developed as a **portfolio-level AI and Data Analytics application** demonstrating practical skills in:
+**Yash Bankhele**
+B.E. Artificial Intelligence & Data Science
 
-* Data Analytics
-* Python Development
-* Machine Learning
-* Generative AI
-* LLM Integration
-* Business Intelligence
-* Data Visualization
-* Dashboard Development
-* Forecasting
-* API Integration
+- GitHub: [@yashbankhele](https://github.com/yashbankhele)
+- LinkedIn: [yashbankhele](https://www.linkedin.com/in/yashbankhele)
 
 ---
 
-# ⚠️ Disclaimer
+<div align="center">
 
-This project is created for **learning, portfolio, and demonstration purposes**.
+⭐ **If you find this project useful, consider giving the repo a star!**
 
-Forecasting results are basic estimates and should not be treated as guaranteed business predictions.
-
-Business recommendations are generated from available dataset facts and should be validated before real-world decision-making.
-
----
-
-# 👨‍💻 Author
-
-## Yash Bankhele
-
-**B.E. Artificial Intelligence & Data Science**
-
-Interested in:
-
-* Data Analytics
-* Artificial Intelligence
-* Machine Learning
-* Generative AI
-* Python Development
-* Data-driven Applications
-
-### Connect with Me
-
-* GitHub: [https://github.com/yashbankhele](https://github.com/yashbankhele)
-* LinkedIn: [https://www.linkedin.com/in/yashbankhele](https://www.linkedin.com/in/yashbankhele)
-
----
-
-⭐ **If you find this project useful, consider giving the repository a star!**
-
-```
-
-```
+</div>
