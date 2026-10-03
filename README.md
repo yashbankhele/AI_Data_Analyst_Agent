@@ -1,8 +1,4 @@
-Bilkul bhai. Uploaded README ka structure/content use karke, **Yash Bankhele ke GitHub repo ke liye professional README** bana sakte hain. Source README mein project ke features, architecture, tech stack, folder structure, installation, usage aur design principle already documented hain.  
 
-Neeche **ready-to-paste `README.md`** hai. Maine author/identity ko **Yash Bankhele** ke naam se set kiya hai aur repo URL ko tere GitHub repo ke according rakha hai.
-
-````markdown
 # 🤖 AI Data Analyst Agent
 
 ### AI-Powered Data Analytics & Business Intelligence Platform
